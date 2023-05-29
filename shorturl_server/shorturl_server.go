@@ -89,7 +89,7 @@ func (s *server) DeleteLink(ctx context.Context, req *pb.DeleteLinkRequest) (*pb
 }
 
 func init() {
-	flag.StringVar(&database, "database", "in-memory", "select database: postgresql  in-memory")
+	flag.StringVar(&database, "database", "in-memory", "select database: postgresql or in-memory")
 	flag.Parse()
 
 	switch database {
