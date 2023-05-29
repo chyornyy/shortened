@@ -1,0 +1,41 @@
+syntax="proto3";
+ 
+option go_package="shortened.ru/shorturl";
+
+package proto;
+
+// The Link service definition.
+service LinkService {
+   rpc CreateLink(CreateLinkRequest) returns (CreateLinkResponse) {}
+   rpc GetLink(ReadLinkRequest) returns (ReadLinkResponse) {}
+   rpc DeleteLink(DeleteLinkRequest) returns (DeleteLinkResponse) {}
+}
+
+message Link {
+   string shorturl = 1;
+   string originalurl = 2;
+}
+
+message CreateLinkRequest {
+   Link link = 1;
+}
+
+message CreateLinkResponse {
+   Link link = 1;
+}
+
+message ReadLinkRequest{
+   string shorturl = 1;
+}
+
+message ReadLinkResponse{
+   Link link = 1;
+}
+
+message DeleteLinkRequest{
+   string shorturl = 1;
+}
+
+message DeleteLinkResponse{
+   bool success = 1;
+}
