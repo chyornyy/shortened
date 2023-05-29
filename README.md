@@ -3,8 +3,6 @@ TinyUrl-like project. Shorten long links into shareable format for easier sharin
 
 ## Stack:
 
-### Frontend:
-
 ### Backend:
 [![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://go.dev/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
@@ -50,14 +48,31 @@ This script installs and configures a shortened gRPC-server and gRPC-client by p
 7. Enables the systemd services to start automatically on boot.
 
 ## Usage
-Use Postman
+
+### Endpoints
+```
+GET /links/:shorturl - retrieves the original URL associated with the given short URL.
+```
+```
+POST /links/ - creates a new short URL and associates it with the provided original URL.
+```
+```
+DELETE /links/:shorturl - deletes the association between the given short URL and its original URL.
+```
+### Use [Postman](https://www.postman.com/) or alternatively use [curl](https://curl.se/)
+
 ![POST](https://github.com/chyornyy/shortened/blob/main/images/POST-request.png)
-
+``` zsh
+curl -X POST '{"originalurl": "ya.ru"}' https://shortened.ru/links/
+```
 ![GET](https://github.com/chyornyy/shortened/blob/main/images/GET-request.png)
-
+``` zsh
+curl https://shortened.ru/links/fE54KN4v_4
+```
 ![DELETE](https://github.com/chyornyy/shortened/blob/main/images/DELETE-request.png)
-
-
+``` zsh
+curl -X DELETE https://shortened.ru/links/fE54KN4v_4
+```
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
