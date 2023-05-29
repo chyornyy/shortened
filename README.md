@@ -51,11 +51,11 @@ This script installs and configures a shortened gRPC-server and gRPC-client by p
 
 ## Usage
 Use Postman
-![POST](https://github.com/chyornyy/shortened/tree/main/images/POST-request.png)
+![POST](https://github.com/chyornyy/shortened/blob/main/images/POST-request.png)
 
-![GET](https://github.com/chyornyy/shortened/tree/main/images/GET-request.png)
+![GET](https://github.com/chyornyy/shortened/blob/main/images/GET-request.png)
 
-![DELETE](https://github.com/chyornyy/shortened/tree/main/images/DELETE-request.png)
+![DELETE](https://github.com/chyornyy/shortened/blob/main/images/DELETE-request.png)
 
 
 
