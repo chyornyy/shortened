@@ -6,17 +6,18 @@ sudo apt install postgresql postgresql-contrib nginx snapd -y
 
 sudo ufw allow 'Nginx Full'
 sudo ufw allow OpenSSH
-sudo ufw enable
+sudo ufw enable -y
 sudo ufw status
-sudo systemctl start nginx
+sudo systemctl start nginx -y
 sudo rm /etc/nginx/sites-enabled/default
-sudo nano /etc/nginx/sites-enabled/default
+nano /etc/nginx/sites-enabled/default
 sudo systemctl reload nginx
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew install go
 git clone https://github.com/chyornyy/shortened.git
+cd shortened && nano .env
 
 go build shorturl/shorturl_server/main.go
 go build shorturl/shorturl_client/main.go
@@ -52,6 +53,6 @@ sudo snap install core; sudo snap refresh core
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot 
 sudo certbot --nginx
-sudo systemctl reload nginx
+sudo systemctl reload nginx -y
 
 sudo reboot
