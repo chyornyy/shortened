@@ -9,10 +9,10 @@ import (
 	"net"
 	"sync"
 
-	db "shorturl/database"
-	md "shorturl/model"
-	pb "shorturl/shorturl_proto"
-	ul "shorturl/utils"
+	db "shortened/database"
+	md "shortened/model"
+	pb "shortened/shorturl_proto"
+	ul "shortened/utils"
 
 	"google.golang.org/grpc"
 )

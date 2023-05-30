@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	md "shorturl/model"
+	md "shortened/model"
 
 	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"

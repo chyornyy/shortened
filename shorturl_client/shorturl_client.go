@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	md "shorturl/model"
-	pb "shorturl/shorturl_proto"
+	md "shortened/model"
+	pb "shortened/shorturl_proto"
 
 	"github.com/gin-gonic/gin"
 	"google.golang.org/grpc"
